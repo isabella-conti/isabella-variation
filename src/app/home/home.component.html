@@ -1,0 +1,28 @@
+<section class="hero">
+  <div class="hero-content">
+    <h1>The Isabella Variation</h1>
+    <p class="subtitle">Where chess, code, and creativity converge.</p>
+    <button routerLink="/blog">Explore the Blog</button>
+  </div>
+</section>
+
+<section class="about">
+  <div class="about-container">
+    <h2>Hi, I'm Isabella 👋</h2>
+    <p>
+      Brazilian Chess Champion, Angular Frontend Developer & Educator.<br />
+      I blend logic, strategy, and tech to teach and grow through chess.
+    </p>
+    <a routerLink="/about">Learn more →</a>
+  </div>
+</section>
+
+<section class="latest-posts">
+  <h2>Latest Posts</h2>
+  <div class="posts-grid">
+    <div class="post-card" *ngFor="let post of posts">
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.excerpt }}</p>
+    </div>
+  </div>
+</section>
