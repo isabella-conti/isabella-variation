@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
 posts = [
-  { title: 'Why Chess Makes You Smarter', excerpt: 'Exploring how chess shapes logical thinking.', slug: 'chess-smarter' },
+  { title: 'Back training chess after 1 year', excerpt: 'Chess studying can sometimes be frustrating', slug: 'chess-smarter' },
   { title: 'My First Week with Angular', excerpt: 'What I learned combining chess and frontend dev.', slug: 'angular-week-1' },
   { title: 'Using AI to Train Like a Grandmaster', excerpt: 'My journey into personalized chess training with AI.', slug: 'ai-chess-train' }
 ];

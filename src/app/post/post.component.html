@@ -1,0 +1,8 @@
+<section class="post-page" *ngIf="post">
+  <h1>{{ post.title }}</h1>
+  <article class="post-content" [innerHTML]="safeContent"></article>
+</section>
+
+<section *ngIf="!post">
+  <h2>Post not found</h2>
+</section>

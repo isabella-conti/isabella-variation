@@ -1,15 +1,20 @@
 import { Component } from '@angular/core';
-import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterOutlet } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HomeComponent],
-  styleUrls: ['./app.component.css'], // ← CORRETO AGORA
+  imports: [NavbarComponent, RouterOutlet, HttpClientModule],
+  styleUrls: ['./app.component.css'],
   template: `
     <main>
+      <section class="navbar">
+        <app-navbar></app-navbar>
+      </section>
       <section class="content">
-        <app-home></app-home>
+        <router-outlet></router-outlet>
       </section>
     </main>
   `,
