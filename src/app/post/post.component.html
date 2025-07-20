@@ -1,6 +1,7 @@
 <section class="post-page" *ngIf="post">
   <h1>{{ post.title }}</h1>
   <article class="post-content" [innerHTML]="safeContent"></article>
+  <h6>{{ post.author }} on {{ post.date }}</h6>
 
   <div class="post-navigation">
     <a *ngIf="previousPost" [routerLink]="['/posts', previousPost.slug]" class="nav-button">

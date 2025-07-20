@@ -18,7 +18,7 @@ export class PostComponent implements OnInit {
   private postService = inject(PostsService);
   private sanitizer = inject(DomSanitizer);
 
-  post: (BlogPost & { index: number }) | undefined;
+  post: (BlogPost & { index: number, date:string }) | undefined;
   previousPost: BlogPost | null = null;
   nextPost: BlogPost | null = null;
 
