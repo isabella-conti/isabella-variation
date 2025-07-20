@@ -1,14 +1,27 @@
-body {
-  background-color: var(--bg-dark);
-  color: var(--text-light);
-  font-family: var(--font-main);
-  margin: 0;
+:root {
+  --green: #58AC44;
+  --green-hover: #4e963c;
+  --bg-dark: #2E2E2E;
+  --bg-medium: #3C3C3C;
+  --text-light: #ffffff;
+  --text-muted: #cccccc;
+  --card-border: #444444;
+  --font-main: 'Segoe UI', 'Roboto', sans-serif;
 }
 
-/* HERO SECTION */
+/* GENERAL */
+body, section {
+  font-family: var(--font-main);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+}
+
+/* HERO */
 .hero {
   background-color: var(--bg-medium);
-  padding: 100px 20px;
+  padding: 80px 20px;
   text-align: center;
   border-bottom: 1px solid var(--card-border);
 }
@@ -20,31 +33,29 @@ body {
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: var(--text-muted);
   margin-bottom: 2rem;
 }
 
-.hero button {
+.cta-button {
+  display: inline-block;
   padding: 0.75rem 2rem;
   background-color: var(--green);
   color: var(--text-light);
   font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  border-radius: 8px;
   font-size: 1rem;
   transition: background-color 0.3s ease;
 }
 
-.hero button:hover {
+.cta-button:hover {
   background-color: var(--green-hover);
 }
 
-/* ABOUT SECTION */
+/* ABOUT */
 .about {
   padding: 60px 20px;
-  background-color: var(--bg-dark);
   text-align: center;
 }
 
@@ -55,13 +66,13 @@ body {
 
 .about h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
   color: var(--green);
+  margin-bottom: 1rem;
 }
 
 .about p {
-  color: var(--text-muted);
   font-size: 1.1rem;
+  color: var(--text-muted);
 }
 
 .about a {
@@ -70,9 +81,14 @@ body {
   color: var(--green);
   font-weight: bold;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
-/* POSTS */
+.about a:hover {
+  color: var(--green-hover);
+}
+
+/* LATEST POSTS */
 .latest-posts {
   padding: 60px 20px;
   background-color: var(--bg-medium);
@@ -82,12 +98,13 @@ body {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: var(--green);
 }
 
 .posts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 24px;
   max-width: 1000px;
   margin: auto;
 }
@@ -95,25 +112,25 @@ body {
 .post-card {
   background-color: var(--bg-dark);
   border: 1px solid var(--card-border);
-  padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 10px;
+  padding: 24px;
   transition: transform 0.2s ease, border-color 0.3s;
 }
 
 .post-card:hover {
-  transform: scale(1.02);
+  transform: translateY(-4px);
   border-color: var(--green);
 }
 
 .post-card h3 {
   color: var(--text-light);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 0.5rem;
 }
 
 .post-card p {
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -121,4 +138,5 @@ body {
   color: var(--green);
   font-weight: bold;
   text-decoration: none;
+  font-size: 0.95rem;
 }

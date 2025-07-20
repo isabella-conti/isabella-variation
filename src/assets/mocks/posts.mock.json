@@ -1,12 +1,12 @@
 [
   {
-    "slug": "chess-smarter",
-    "title": "Why Chess Makes You Smarter",
+    "slug": "back-to-training",
+    "title": "Chess studying can sometimes be frustrating",
     "content": "<p>Chess is a game that enhances cognitive ability by...</p><img src='assets/images/chess-brain.jpg' alt='Chess and brain'><p>Here are some strategies...</p>"
   },
   {
-    "slug": "angular-week-1",
-    "title": "My First Week with Angular",
+    "slug": "chess-week-1",
+    "title": "My First Week Training",
     "content": "<p>Combining chess with frontend development has been exciting because...</p><img src='assets/images/angular-logo.png' alt='Angular logo'>"
   },
   {
