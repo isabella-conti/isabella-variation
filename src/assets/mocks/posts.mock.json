@@ -1,27 +1,14 @@
 [
   {
+    "slug": "training-chess-week-1",
+    "title": "Week 1: Back to Training with Tal",
+    "content": "<p>My first week of training is done — and it felt great to be back!</p><p>As I mentioned in my last post, I’ve started reading <em>Tal vs. Botvinnik, 1960</em>. So far, I’ve studied 5 games from the book. I’ll be honest — I didn’t manage to train every single day this week. I had to take two days off due to a minor medical procedure, but everything's okay now. The five days I did train, though, were super insightful.</p><p>One thing that really stood out to me in Tal’s writing is how much he talks about the <strong>psychological aspect</strong> of chess. I’ve never read much about that before. Of course, the book is about a World Championship match, but many of the principles apply to regular tournaments too — even for us mere mortals!</p><p>Tal discusses the importance of home preparation — thinking about what your opponent has studied, what you’ve prepared more deeply, and how that affects decisions during the game. He also emphasizes understanding your opponent’s style: are they positional, tactical, dynamic? That kind of knowledge helps you steer the game into territory they might be less comfortable with.</p><p>In his match, Botvinnik was known for his strategic and positional play, while Tal was famous for his creativity and tactical brilliance. It’s fascinating to see how Tal adjusted his strategy to avoid Botvinnik’s comfort zones — sometimes declining piece trades, sometimes forcing complications, and other times heading for a draw if the position demanded it.</p><div style='display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;'> <img src='/assets/images/chess.jpeg' alt='Chess board' style='width: 200px; border-radius: 8px;'> <img src='/assets/images/booktal.jpg' alt='Book Tal vs Botvinnik' style='width: 200px; border-radius: 8px;'></div><p>While studying the first five games from <em>Tal vs. Botvinnik, 1960</em>, I realized I was learning way more than just moves and variations. It made me reflect on my own style. Tal stayed true to his strengths — a creative, tactical player — and that got me thinking: do I prefer sharp, tactical battles or calmer, positional struggles? I’m still figuring that out.</p><p>Another practical lesson is knowing when to spend time thinking deeply and when to trust your intuition. Tal often trusted familiar patterns, which saves energy and time — something I definitely want to develop more.</p><p>And finally, the most valuable part: reading Tal’s commentary on the games. Understanding his thought process is even more important than memorizing the moves. His view of chess as a mental, psychological, and strategic duel really inspires me to study more deeply.</p><p>I’m really enjoying this mix of training and reading. I already feel like I’m starting to think a bit deeper — not just about the moves, but about the minds behind them. Let’s see what week 2 brings!</p>"
+  },
+
+    {
     "slug": "back-to-training",
-    "title": "Chess studying can sometimes be frustrating",
-    "content": "<p>Chess is a game that enhances cognitive ability by...</p><img src='assets/images/chess-brain.jpg' alt='Chess and brain'><p>Here are some strategies...</p>"
-  },
-  {
-    "slug": "chess-week-1",
-    "title": "My First Week Training",
-    "content": "<p>Combining chess with frontend development has been exciting because...</p><img src='assets/images/angular-logo.png' alt='Angular logo'>"
-  },
-  {
-    "slug": "ai-chess-train",
-    "title": "Using AI to Train",
-    "content": "<p>AI tools can analyze games and suggest moves in ways that help...</p><img src='assets/images/ai-chess.png' alt='AI chess training'>"
-  },
-  {
-    "slug": "ai-chess",
-    "title": "Using AI to Train",
-    "content": "<p>AI tools can analyze games and suggest moves in ways that help...</p><img src='assets/images/ai-chess.png' alt='AI chess training'>"
-  },
-  {
-    "slug": "ai-train",
-    "title": "Using AI to Train",
-    "content": "<p>AI tools can analyze games and suggest moves in ways that help...</p><img src='assets/images/ai-chess.png' alt='AI chess training'>"
+    "title": "Back on the Board: Returning to Chess After a Busy Year",
+    "content": "<p>It’s been over a year since I last played a chess tournament. In August 2024, I started working at Itaú-Unibanco, and since then, chess slowly faded from my routine. I missed it deeply, but life got busy — and somehow, it just didn’t fit anymore. Ironically, even though my schedule feels tighter than ever, I finally feel ready to bring chess back into my life.</p><p>Since this is my first blog post, I want to share a little more about me and where I’m at now. I live with two lovely dogs, Bela and Polenta — they’re sweet, full of personality, and truly the light of my days. Just look at them:</p><div style='display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;'> <img src='/assets/images/bonitinhas.jpeg' alt='Bela e Polenta' style='width: 300px; border-radius: 8px;'> <img src='/assets/images/fofinhas.jpeg' alt='As duas fofinhas' style='width: 300px; border-radius: 8px;'></div><p>My days are full — I work 8 hours a day, go to the gym, take care of my dogs, cook, clean, study Computer Science at university, and dive deep into tech. This blog is part of my growth as a front-end developer. I thought: why not mix passion with practice? Documenting my chess training through an Angular project felt like the perfect challenge.</p><p>So, I officially restarted my training on July 13. It’s July 20 now — one week in. Day one was rough. I couldn’t solve a simple puzzle and felt discouraged. I started reading <em>Tal vs. Botvinnik, 1960</em>, a book I won in a chess tournament back in 2022. A former coach once told me I’d love it because I enjoy Seirawan’s writing, and Tal, he said, was also a brilliant storyteller. So far, he’s right.</p><p>For now, I’m keeping things light and consistent: I do 5 puzzles on Chess.com, 12 exercises from the <em>Woodpecker Method</em>, and study one annotated game from Tal’s book — which takes me about 70 minutes per game. Honestly, it’s been tough. I feel more anxious and impatient than I used to. I’m missing tactics I would’ve seen before. But I also feel a small shift already — I was more anxious seven days ago than I am today. It’s a process.</p><p>So, why did I come back? Partly because I’ve finally made space for it. But also because I have a big goal: I’ll be playing three tournaments this year. The most important one is the Brazilian Women’s Championship in early December. If I finish in the top three, I’ll qualify for the Chess Olympiad — which would be incredible. The other two tournaments are: the <strong>Mineiro Championship</strong> (August 28), and the <strong>JASC</strong> (November 22), where I’ll compete for a team that invited me. The Mineiro will be a kind of warm-up — I want to see how much rust I’ve gathered over the year.</p><p>So here we go — three tournaments, four months to prepare, and a lot of chess ahead. Let’s do this. ♟️</p>"
   }
+
 ]
