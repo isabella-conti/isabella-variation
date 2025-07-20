@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "deploy:ghdocs": "ng build --configuration production --output-path docs --base-href /isabella-variation/"
   },
   "private": true,
   "dependencies": {
