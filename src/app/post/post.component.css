@@ -18,3 +18,24 @@
   line-height: 1.7;
   color: var(--text-muted);
 }
+
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.nav-button {
+  color: white;
+  background-color: var(--green);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: var(--green-hover);
+}
+
