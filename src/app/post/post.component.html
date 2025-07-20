@@ -1,6 +1,15 @@
 <section class="post-page" *ngIf="post">
   <h1>{{ post.title }}</h1>
   <article class="post-content" [innerHTML]="safeContent"></article>
+
+  <div class="post-navigation">
+    <a *ngIf="previousPost" [routerLink]="['/posts', previousPost.slug]" class="nav-button">
+      ← {{ previousPost.title }}
+    </a>
+    <a *ngIf="nextPost" [routerLink]="['/posts', nextPost.slug]" class="nav-button">
+      {{ nextPost.title }} →
+    </a>
+  </div>
 </section>
 
 <section *ngIf="!post">

@@ -17,7 +17,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.postsService.getPosts().subscribe(data => {
-      this.posts = data.slice(0, 3);
+      this.posts = data
+        .sort((a, b) => b.index - a.index)
+        .slice(0, 3);
     });
   }
+
 }
