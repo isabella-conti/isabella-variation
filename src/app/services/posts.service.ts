@@ -25,4 +25,5 @@ export class PostsService {
       map(posts => posts.find(post => post.slug === slug))
     );
   }
+
 }
