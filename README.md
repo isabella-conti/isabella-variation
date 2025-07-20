@@ -1,27 +1,53 @@
-# BlogIsa
+# ♟️ Chess Training Blog - Angular Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+This is a personal project built with Angular to document and share my journey back into chess training. The blog is a lightweight, modern, and responsive Single Page Application (SPA).
 
-## Development server
+## 📌 Purpose
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The goal is to log my training progress, lessons learned, and thoughts — especially while studying books, solving puzzles, and preparing for tournaments. It also serves as a front-end development practice project using Angular.
 
-## Code scaffolding
+## 🚀 Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- View detailed posts with safe HTML rendering.
+- Home page shows the most recent blog posts.
+- "About" page with personal background.
+- Navigate between posts (next/previous buttons).
+- Responsive and modern layout with custom CSS.
+- Static mock data from `assets/mocks/posts.mock.json`.
+- SEO-friendly URLs based on post slugs.
 
-## Build
+## 🧩 Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [Angular 17+](https://angular.io/)
+- TypeScript
+- HTML5 + CSS3
+- RxJS
+- Angular Router
+- DomSanitizer (for safe HTML rendering)
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 📝 How to Add a New Post
 
-## Running end-to-end tests
+1. Open the file:  
+   `assets/mocks/posts.mock.json`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Add a new object with the following format:
 
-## Further help
+    ```json
+    {
+    "index": 5,
+    "slug": "my-new-post",
+    "title": "My New Post",
+    "content": "<p>This is the content of my new post...</p>"
+    }
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ 
+ - index: used to sort posts (higher = more recent).
+
+ - slug: used in the post URL (/post/my-new-post).
+
+ - title: the post’s title.
+
+ - content: the post’s HTML body.
+
+ Made with ❤️ by Isabella Conti

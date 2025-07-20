@@ -5,6 +5,8 @@ import { Observable, map } from 'rxjs';
 
 export interface BlogPost {
   slug: string;
+  date: string;
+  author: string
   title: string;
   content: string;
 }
