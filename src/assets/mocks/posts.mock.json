@@ -11,7 +11,17 @@
   },
   {
     "slug": "ai-chess-train",
-    "title": "Using AI to Train Like a Grandmaster",
+    "title": "Using AI to Train",
+    "content": "<p>AI tools can analyze games and suggest moves in ways that help...</p><img src='assets/images/ai-chess.png' alt='AI chess training'>"
+  },
+  {
+    "slug": "ai-chess",
+    "title": "Using AI to Train",
+    "content": "<p>AI tools can analyze games and suggest moves in ways that help...</p><img src='assets/images/ai-chess.png' alt='AI chess training'>"
+  },
+  {
+    "slug": "ai-train",
+    "title": "Using AI to Train",
     "content": "<p>AI tools can analyze games and suggest moves in ways that help...</p><img src='assets/images/ai-chess.png' alt='AI chess training'>"
   }
 ]

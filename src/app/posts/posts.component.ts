@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { PostsService, BlogPost } from '../services/posts.service';
 
 @Component({
   selector: 'app-posts',
@@ -9,10 +10,13 @@ import { RouterModule } from '@angular/router';
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.css']
 })
-export class PostsComponent {
-  posts = [
-    { title: 'Why Chess Makes You Smarter', excerpt: 'Exploring how chess shapes logical thinking.', slug: 'back-to-training' },
-    { title: 'My First Week with Angular', excerpt: 'What I learned combining chess and frontend dev.', slug: 'chess-week-1' },
-    { title: 'Using AI to Train Like a Grandmaster', excerpt: 'My journey into personalized chess training with AI.', slug: 'ai-chess-train' }
-  ];
+export class PostsComponent implements OnInit {
+  private postsService = inject(PostsService);
+  posts: BlogPost[] = [];
+
+  ngOnInit(): void {
+    this.postsService.getPosts().subscribe(data => {
+      this.posts = data;
+    });
+  }
 }

@@ -1,13 +1,3 @@
-:root {
-  --green: #58AC44;
-  --green-hover: #4e963c;
-  --bg-dark: #2E2E2E;
-  --bg-medium: #3C3C3C;
-  --text-light: #ffffff;
-  --text-muted: #cccccc;
-  --card-border: #444444;
-  --font-main: 'Segoe UI', 'Roboto', sans-serif;
-}
 
 /* GENERAL */
 body, section {
@@ -88,7 +78,6 @@ body, section {
   color: var(--green-hover);
 }
 
-/* LATEST POSTS */
 .latest-posts {
   padding: 60px 20px;
   background-color: var(--bg-medium);

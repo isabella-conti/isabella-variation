@@ -1,19 +1,23 @@
-import { Component } from '@angular/core';
+// src/app/home/home.component.ts
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { PostsService, BlogPost } from '../services/posts.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-posts = [
-  { title: 'Back training chess after 1 year', excerpt: 'Chess studying can sometimes be frustrating', slug: 'back-to-training' },
-  { title: 'My First Week with Angular', excerpt: 'What I learned combining chess and frontend dev.', slug: 'chess-week-1' },
-  { title: 'Using AI to Train Like a Grandmaster', excerpt: 'My journey into personalized chess training with AI.', slug: 'ai-chess-train' }
-];
+export class HomeComponent implements OnInit {
+  private postsService = inject(PostsService);
+  posts: BlogPost[] = [];
 
+  ngOnInit(): void {
+    this.postsService.getPosts().subscribe(data => {
+      this.posts = data.slice(0, 3);
+    });
+  }
 }
