@@ -1,0 +1,19 @@
+<section class="page-hero">
+  <p class="eyebrow">Cursos gravados</p>
+  <h1>Conteúdos objetivos para estudar no seu ritmo.</h1>
+  <p class="lead">
+    Cada curso gravado resolve um tema específico. Assim, você escolhe o que faz mais sentido agora.
+  </p>
+</section>
+
+<section class="course-grid">
+  <article class="course-card" *ngFor="let course of courses">
+    <h2>{{ course.title }}</h2>
+    <p>{{ course.text }}</p>
+  </article>
+</section>
+
+<section class="final-card" id="contato">
+  <h2>Quer uma indicação? Eu posso te ajudar a escolher.</h2>
+  <p>Se você ainda está em dúvida, eu posso apontar o melhor curso para o seu momento.</p>
+</section>

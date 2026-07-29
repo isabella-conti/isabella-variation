@@ -10,5 +10,14 @@ import { RouterModule } from '@angular/router';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-  skills = ['Angular', 'Chess Strategy', 'AI in Chess', 'Teaching', 'Frontend Development', 'UX/UI'];
+  youtubeChannel = 'https://www.youtube.com/@MNConti';
+
+  skills = [
+    'Mentoria de xadrez',
+    'Aulas individuais',
+    'Cursos avulsos',
+    'Cronograma personalizado',
+    'Acompanhamento estratégico',
+    'Estudo com clareza',
+  ];
 }

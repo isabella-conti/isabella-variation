@@ -1,0 +1,30 @@
+<section class="page-hero">
+  <p class="eyebrow">Mentoria de xadrez</p>
+  <h1>Treino com rotina, direção e acompanhamento.</h1>
+  <p class="lead">
+    A mentoria foi pensada para quem quer parar de estudar de forma solta e passar a seguir um plano claro.
+  </p>
+</section>
+
+<section class="content-grid">
+  <article class="info-card">
+    <h2>Como funciona</h2>
+    <ul>
+      <li *ngFor="let item of highlights">{{ item }}</li>
+    </ul>
+  </article>
+
+  <article class="info-card">
+    <h2>Planos</h2>
+    <div class="plan" *ngFor="let plan of plans">
+      <h3>{{ plan.title }}</h3>
+      <p>{{ plan.text }}</p>
+      <a [href]="plan.link" class="button-link">Quero esse plano</a>
+    </div>
+  </article>
+</section>
+
+<section class="final-card" id="contato">
+  <h2>Se você quer evoluir com acompanhamento, esse é o caminho.</h2>
+  <p>Posso adaptar a mentoria para seu nível, sua agenda e seu objetivo no xadrez.</p>
+</section>

@@ -1,11 +1,15 @@
 :root {
-  --green: #58AC44;
-  --green-hover: #4e963c;
-  --bg-dark: #2E2E2E;
-  --bg-medium: #3C3C3C;
-  --text-light: #ffffff;
-  --text-muted: #cccccc;
-  --card-border: #444444;
+  --green: #556B2F;
+  --green-hover: #606E41;
+  --bg-dark: #2F1C12;
+  --bg-medium: #4A2E1B;
+  --text-light: #F3E7CE;
+  --text-muted: #D4C2A3;
+  --card-border: rgba(229, 169, 59, 0.18);
+  --accent-gold: #E5A93B;
+  --accent-gold-hover: #DAA520;
+  --accent-rust: #B7410E;
+  --accent-rust-dark: #B7410E;
   --font-main: 'Segoe UI', 'Roboto', sans-serif;
 }
 

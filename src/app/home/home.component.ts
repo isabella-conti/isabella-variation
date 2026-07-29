@@ -1,8 +1,6 @@
-// src/app/home/home.component.ts
-import { Component, inject, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { PostsService, BlogPost } from '../services/posts.service';
 
 @Component({
   selector: 'app-home',
@@ -11,16 +9,23 @@ import { PostsService, BlogPost } from '../services/posts.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
-  private postsService = inject(PostsService);
-  posts: BlogPost[] = [];
-
-  ngOnInit(): void {
-    this.postsService.getPosts().subscribe(data => {
-      this.posts = data
-        .sort((a, b) => b.index - a.index)
-        .slice(0, 3);
-    });
-  }
+export class HomeComponent {
+  offers = [
+    {
+      title: 'Mentoria de xadrez',
+      summary: '1h30 por semana, grupo no WhatsApp e plano individual.',
+      link: '/mentoria',
+    },
+    {
+      title: 'Aula individual',
+      summary: '1h comigo com cronograma de estudos personalizado.',
+      link: '/aula-individual',
+    },
+    {
+      title: 'Cursos gravados',
+      summary: 'Aulas objetivas para estudar no seu ritmo.',
+      link: '/cursos-gravados',
+    },
+  ];
 
 }

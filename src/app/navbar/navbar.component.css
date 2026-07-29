@@ -1,6 +1,6 @@
 
 .navbar {
-  background-color: var(--bg-dark);
+  background: linear-gradient(180deg, rgba(47, 28, 18, 0.98), rgba(47, 28, 18, 0.92));
   color: var(--text-light);
   padding: 1rem 2rem;
   display: flex;
@@ -11,7 +11,7 @@
 }
 
 .logo a {
-  color: var(--green);
+  color: var(--accent-gold);
   font-weight: bold;
   text-decoration: none;
   font-size: 1.4rem;
@@ -19,7 +19,7 @@
 }
 
 .logo a:hover {
-  color: var(--green-hover);
+  color: var(--accent-gold-hover);
 }
 
 .nav-links {
@@ -44,10 +44,10 @@
 }
 
 .nav-links a:hover {
-  color: var(--green);
+  color: var(--accent-gold);
 }
 
 .nav-links a.router-link-active {
-  color: var(--green);
+  color: var(--accent-gold);
   font-weight: 600;
 }
