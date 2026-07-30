@@ -2,7 +2,7 @@
   padding: 60px 20px;
   max-width: 900px;
   margin: auto;
-  background: linear-gradient(180deg, rgba(74, 46, 27, 0.72), rgba(47, 28, 18, 0.82));
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.82), rgba(15, 23, 42, 0.92));
   color: var(--text-light);
   font-family: var(--font-main);
 }
@@ -47,10 +47,10 @@
 }
 
 .skills li {
-  background-color: rgba(74, 46, 27, 0.88);
+  background-color: rgba(30, 41, 59, 0.88);
   padding: 8px 16px;
   border-radius: 20px;
-  border: 1px solid rgba(229, 169, 59, 0.18);
+  border: 1px solid rgba(96, 165, 250, 0.18);
   font-size: 0.95rem;
   color: var(--text-light);
 }
@@ -68,7 +68,7 @@
   display: inline-flex;
   align-items: center;
   background-color: var(--accent-gold);
-  color: #F3E7CE;
+  color: #0F172A;
   padding: 10px 20px;
   border-radius: 6px;
   text-decoration: none;
@@ -78,4 +78,28 @@
 
 .cta a:hover {
   background-color: var(--accent-gold-hover);
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 40px 16px;
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+  }
+
+  .bio {
+    font-size: 1rem;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta a {
+    justify-content: center;
+  }
 }
