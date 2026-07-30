@@ -1,10 +1,12 @@
 <nav class="navbar">
   <div class="logo">
-    <a routerLink="/">♟️ The Isabella Variation</a>
+    <a routerLink="/">♟️</a>
   </div>
   <ul class="nav-links">
-    <li><a routerLink="/">Home</a></li>
-    <li><a routerLink="/posts">Posts</a></li>
-    <li><a routerLink="/about">About</a></li>
+    <li><a routerLink="/" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+    <li><a routerLink="/mentoria" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">Mentoria</a></li>
+    <li><a routerLink="/aula-individual" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">Aula individual</a></li>
+    <li><a routerLink="/cursos-gravados" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">Cursos gravados</a></li>
+    <li><a routerLink="/about" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }">Sobre mim</a></li>
   </ul>
 </nav>

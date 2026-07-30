@@ -20,5 +20,5 @@ import { HttpClientModule } from '@angular/common/http';
   `,
 })
 export class AppComponent {
-  title = 'blog-isa';
+  title = 'Isabella Chess Academy';
 }

@@ -1,0 +1,29 @@
+<section class="page-hero">
+  <p class="eyebrow">Aula individual</p>
+  <h1>Uma aula para entender seu jogo e organizar seus próximos passos.</h1>
+  <p class="lead">
+    Aqui a ideia é ser direto: uma sessão de 1h, análise do seu momento atual e um plano de estudo feito para você.
+  </p>
+</section>
+
+<section class="content-grid">
+  <article class="info-card">
+    <h2>O que acontece na aula</h2>
+    <ul>
+      <li *ngFor="let step of steps">{{ step }}</li>
+    </ul>
+  </article>
+
+  <article class="info-card">
+    <h2>Para quem é</h2>
+    <p>
+      Para quem quer estudar com mais clareza, corrigir erros com foco e ter um caminho simples de seguir depois da aula.
+    </p>
+    <a href="#contato" class="button-link">Abrir o forms</a>
+  </article>
+</section>
+
+<section class="final-card" id="contato">
+  <h2>Se você quer uma aula sob medida, esse formato é para você.</h2>
+  <p>Eu posso ajustar o conteúdo para iniciante, intermediário ou avançado.</p>
+</section>

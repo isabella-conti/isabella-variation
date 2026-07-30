@@ -1,30 +1,29 @@
 <section class="hero">
   <div class="hero-content">
-    <h1>The Isabella Variation</h1>
-    <p class="subtitle">Where chess, code, and creativity converge.</p>
-    <a routerLink="/posts" class="cta-button">Explore the Blog</a>
-  </div>
-</section>
-
-<section class="about">
-  <div class="about-container">
-    <h2>Hi, I'm Isabella 👋</h2>
-    <p>
-      Brazilian Chess Champion, Angular Frontend Developer & Educator.<br />
-      I blend logic, strategy, and tech to teach and grow through chess.
-    </p>
-    <a routerLink="/about">Learn more →</a>
-  </div>
-</section>
-
-<section class="latest-posts">
-  <h2>Latest Posts</h2>
-  <div class="posts-grid">
-    <div class="post-card" *ngFor="let post of posts">
-      <h3>{{ post.title }}</h3>
-      <h6>{{ post.author }} on {{ post.date }}</h6>
-      <a [routerLink]="['/posts', post.slug]">Read more →</a>
+    <p class="eyebrow">Treinamento de Xadrez</p>
+    <h1>Escolha o seu próximo passo no xadrez.</h1>
+    <p class="subtitle">Cada formato tem sua própria página para ficar mais claro o que você vai receber.</p>
+    <div class="hero-actions">
+      <a routerLink="/mentoria" class="cta-button primary">Mentoria</a>
+      <a routerLink="/aula-individual" class="cta-button primary">Aula individual</a>
+      <a routerLink="/cursos-avulsos" class="cta-button primary">Cursos gravados</a>
     </div>
   </div>
 </section>
+
+<section class="offers">
+  <div class="section-heading">
+    <p class="section-label">O que eu ofereço</p>
+    <!--<h2>Formatos de treinamento.</h2>-->
+  </div>
+
+  <div class="offer-grid">
+    <article class="offer-card" *ngFor="let offer of offers">
+      <h3>{{ offer.title }}</h3>
+      <p>{{ offer.summary }}</p>
+      <a [routerLink]="offer.link" class="plan-link">Saiba mais</a>
+    </article>
+  </div>
+</section>
+
 
