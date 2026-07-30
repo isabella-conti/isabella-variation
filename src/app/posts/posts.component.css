@@ -10,11 +10,12 @@
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--green);
+  color: var(--accent-gold);
   margin-bottom: 40px;
 }
 
-.posts-list {
+.posts-list,
+.posts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 32px;
@@ -23,11 +24,11 @@
 }
 
 .post-card {
-  background-color: var(--bg-medium);
+  background-color: rgba(15, 23, 42, 0.45);
   border-radius: 12px;
   padding: 24px;
   border: 1px solid var(--card-border);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.2);
   transition: transform 0.2s ease, border 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -36,13 +37,13 @@
 
 .post-card:hover {
   transform: translateY(-6px);
-  border-color: var(--green);
+  border-color: rgba(251, 191, 36, 0.55);
 }
 
 .post-meta .category {
   font-size: 0.75rem;
-  color: var(--green);
-  background-color: rgba(88, 172, 68, 0.1);
+  color: var(--accent-gold);
+  background-color: rgba(251, 191, 36, 0.1);
   padding: 4px 10px;
   border-radius: 20px;
   display: inline-block;
@@ -52,7 +53,8 @@
   letter-spacing: 0.5px;
 }
 
-.post-card h2 {
+.post-card h2,
+.post-card h3 {
   font-size: 1.4rem;
   color: var(--text-light);
   margin-bottom: 0.6rem;
@@ -64,17 +66,19 @@
   flex-grow: 1;
 }
 
-.read-more {
+.read-more,
+.post-card a {
   margin-top: 20px;
   align-self: flex-start;
-  color: var(--green);
+  color: var(--accent-gold);
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.read-more:hover {
-  color: var(--green-hover);
+.read-more:hover,
+.post-card a:hover {
+  color: var(--accent-gold-hover);
 }
 
 .latest-posts {
@@ -86,45 +90,28 @@
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: var(--green);
+  color: var(--accent-gold);
 }
 
-.posts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  max-width: 1000px;
-  margin: auto;
-}
+@media (max-width: 768px) {
+  .posts-page,
+  .latest-posts {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
-.post-card {
-  background-color: var(--bg-dark);
-  border: 1px solid var(--card-border);
-  border-radius: 10px;
-  padding: 24px;
-  transition: transform 0.2s ease, border-color 0.3s;
-}
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 28px;
+  }
 
-.post-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--green);
-}
+  .posts-list,
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
 
-.post-card h3 {
-  color: var(--text-light);
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-}
-
-.post-card p {
-  color: var(--text-muted);
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.post-card a {
-  color: var(--green);
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 0.95rem;
+  .post-card {
+    padding: 20px;
+  }
 }
