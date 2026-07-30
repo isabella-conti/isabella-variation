@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
 export class HomeComponent {
   offers = [
     {
-      title: 'Mentoria de xadrez',
+      title: 'Mentoria de xadrez em turma',
       summary: '1h30 por semana, grupo no WhatsApp e plano individual.',
       link: '/mentoria',
     },

@@ -13,9 +13,9 @@ export class AboutComponent {
   youtubeChannel = 'https://www.youtube.com/@MNConti';
 
   skills = [
-    'Mentoria de xadrez',
+    'Mentoria de xadrez em turma',
     'Aulas individuais',
-    'Cursos avulsos',
+    'Cursos gravados',
     'Cronograma personalizado',
     'Acompanhamento estratégico',
     'Estudo com clareza',
