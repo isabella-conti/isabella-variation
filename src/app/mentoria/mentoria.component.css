@@ -1,17 +1,24 @@
 :host {
   display: block;
-  color: var(--text-light);
   font-family: var(--font-main);
+  color: var(--text-light);
+  background:
+    radial-gradient(circle at top left, rgba(251, 191, 36, 0.16), transparent 26%),
+    radial-gradient(circle at right center, rgba(14, 165, 233, 0.12), transparent 18%),
+    linear-gradient(180deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
 }
 
 :host section {
-  max-width: 1040px;
-  margin: 0 auto;
   padding: 0 20px;
 }
 
 .page-hero {
-  padding: 72px 20px 28px;
+  padding: 84px 20px 54px;
+}
+
+.hero-content {
+  max-width: 1020px;
+  margin: 0 auto;
 }
 
 .eyebrow {
@@ -21,7 +28,7 @@
   border: 1px solid rgba(251, 191, 36, 0.35);
   border-radius: 999px;
   color: var(--accent-gold);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -34,11 +41,12 @@ ul {
   margin-top: 0;
 }
 
-h1 {
-  max-width: 12ch;
-  font-size: clamp(2.4rem, 6vw, 4.6rem);
-  line-height: 0.98;
-  margin-bottom: 14px;
+.page-hero h1 {
+  max-width: 11ch;
+  margin: 0;
+  font-size: clamp(2.5rem, 7vw, 4.2rem);
+  line-height: 0.96;
+  letter-spacing: -0.05em;
 }
 
 .lead,
@@ -51,16 +59,21 @@ h1 {
 .content-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  padding-bottom: 18px;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  align-items: stretch;
 }
 
 .info-card,
 .final-card {
-  background: rgba(15, 23, 42, 0.45);
   border: 1px solid var(--card-border);
+  background: rgba(15, 23, 42, 0.5);
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.22);
   border-radius: 20px;
-  padding: 22px;
+  padding: 28px;
 }
 
 .info-card {
@@ -92,7 +105,7 @@ h1 {
   align-items: center;
   justify-content: center;
   align-self: flex-start;
-  padding: 0.85rem 1rem;
+  padding: 0.85rem 1.1rem;
   border-radius: 12px;
   background: rgba(14, 165, 233, 0.12);
   border: 1px solid rgba(96, 165, 250, 0.28);
@@ -101,12 +114,15 @@ h1 {
 }
 
 .final-card {
+  max-width: 1100px;
+  margin: 0 auto 40px;
   margin-bottom: 40px;
 }
 
 @media (max-width: 900px) {
   .content-grid {
     grid-template-columns: 1fr;
+    max-width: 1100px;
   }
 }
 
@@ -116,24 +132,26 @@ h1 {
   }
 
   .page-hero {
-    padding-top: 100px;
+    padding: 64px 16px 42px;
   }
 
-  h1 {
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .page-hero h1 {
     font-size: clamp(2rem, 10vw, 3rem);
+    max-width: 100%;
+  }
+
+  .content-grid {
+    padding-top: 20px;
+    gap: 18px;
   }
 
   .info-card,
   .final-card {
-    padding: 18px;
-  }
-
-  .info-card ul {
-    padding-left: 18px;
-  }
-
-  .plan {
-    gap: 0.6rem;
+    padding: 22px;
   }
 
   .button-link {
