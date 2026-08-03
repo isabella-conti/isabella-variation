@@ -1,17 +1,16 @@
-name: Deploy GitHub Pages docs
+name: Docs pull request for GitHub Pages
 
 on:
   push:
     branches:
-      - main
-    paths-ignore:
-      - 'docs/**'
+      - 'feature/**'
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
-  build-and-commit-docs:
+  validate-and-open-pr:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,18 +26,24 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Run build
+        run: npm run build --if-present
+
+      - name: Run lint
+        run: npm run lint --if-present
+
       - name: Build docs
         run: npm run deploy:ghdocs
 
-      - name: Commit updated docs
-        run: |
-          if git diff --quiet -- docs; then
-            echo "No docs changes to commit."
-            exit 0
-          fi
+      - name: Create or update pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
+          branch: docs-update-${{ github.ref_name }}
+          title: 'chore: update docs for GitHub Pages'
+          body: |
+            Atualiza o conteúdo versionado em `docs/` com o build mais recente da branch `${{ github.ref_name }}`.
 
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs
-          git commit -m "chore: update GitHub Pages docs [skip ci]"
-          git push
+            Mantenha este PR aberto até a revisão e merge em `main`, para que o GitHub Pages publique a versão nova.
+          commit-message: 'chore: update docs for GitHub Pages'
