@@ -10,9 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrls: ['./app.component.css'],
   template: `
     <main>
-      <section class="navbar">
-        <app-navbar></app-navbar>
-      </section>
+      <app-navbar></app-navbar>
       <section class="content">
         <router-outlet></router-outlet>
       </section>

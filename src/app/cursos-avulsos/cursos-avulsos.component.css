@@ -1,11 +1,8 @@
 :host {
   display: block;
   font-family: var(--font-main);
-  color: var(--text-light);
-  background:
-    radial-gradient(circle at top left, rgba(251, 191, 36, 0.16), transparent 26%),
-    radial-gradient(circle at right center, rgba(14, 165, 233, 0.12), transparent 18%),
-    linear-gradient(180deg, var(--bg-medium) 0%, var(--bg-dark) 100%);
+  color: #111111;
+  background: #eadfce;
 }
 
 :host section {
@@ -27,7 +24,7 @@
   padding: 6px 12px;
   border: 1px solid rgba(251, 191, 36, 0.35);
   border-radius: 999px;
-  color: var(--accent-gold);
+  color: #111111;
   font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -42,6 +39,7 @@ p {
 .page-hero h1 {
   max-width: 11ch;
   margin: 0;
+  color: #111111;
   font-size: clamp(2.5rem, 7vw, 4.2rem);
   line-height: 0.96;
   letter-spacing: -0.05em;
@@ -50,7 +48,7 @@ p {
 .lead,
 .course-card p,
 .final-card p {
-  color: var(--text-muted);
+  color: #3a332e;
   line-height: 1.7;
 }
 
@@ -67,15 +65,16 @@ p {
 
 .course-card,
 .final-card {
-  border: 1px solid var(--card-border);
-  background: rgba(15, 23, 42, 0.5);
-  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.22);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.42);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
   padding: 28px;
 }
 
 .course-card h2 {
   margin-bottom: 10px;
+  color: #111111;
 }
 
 .button-link {
@@ -86,9 +85,9 @@ p {
   margin-top: 12px;
   padding: 0.85rem 1.1rem;
   border-radius: 12px;
-  background: rgba(14, 165, 233, 0.12);
-  border: 1px solid rgba(96, 165, 250, 0.28);
-  color: var(--text-light);
+  background: #c5ad8b;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  color: #111111;
   text-decoration: none;
 }
 

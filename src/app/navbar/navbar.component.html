@@ -1,7 +1,9 @@
 <nav class="navbar">
-  <div class="logo">
-    <a routerLink="/">♟️</a>
-  </div>
+  <a routerLink="/" class="brand-mark" aria-label="Ir para a página inicial">
+    <span class="brand-icon">♟</span>
+    <span class="brand-text">XADREZMASTER</span>
+  </a>
+
   <button
     type="button"
     class="menu-toggle"
@@ -13,11 +15,13 @@
     <span></span>
     <span></span>
   </button>
+
   <ul class="nav-links" [class.open]="menuOpen">
-    <li><a routerLink="/" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a></li>
-    <li><a routerLink="/mentoria" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Mentoria</a></li>
+    <li><a routerLink="/" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Mentoria</a></li>
     <li><a routerLink="/aula-individual" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Aula individual</a></li>
     <li><a routerLink="/cursos-gravados" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Cursos gravados</a></li>
     <li><a routerLink="/about" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Sobre mim</a></li>
   </ul>
+
+  <a routerLink="/mentoria" class="navbar-cta">Quero evoluir</a>
 </nav>

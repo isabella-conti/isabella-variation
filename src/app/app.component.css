@@ -1,12 +1,6 @@
 main {
 	min-height: 100vh;
-	background: var(--bg-dark);
-}
-
-.navbar {
-	position: sticky;
-	top: 0;
-	z-index: 50;
+	background: #eadfce;
 }
 
 .content {

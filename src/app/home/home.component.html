@@ -1,29 +1,93 @@
-<section class="hero">
+<section class="hero-band">
   <div class="hero-content">
-    <p class="eyebrow">Treinamento de Xadrez</p>
-    <h1>Escolha o seu próximo passo no xadrez.</h1>
-    <p class="subtitle">Cada formato tem sua própria página para ficar mais claro o que você vai receber.</p>
+    <p class="eyebrow">Chegou a hora de subir de nível</p>
+    <h1>
+      <span>Procurando</span>
+      <span>melhorar</span>
+      <span>no xadrez?</span>
+    </h1>
+    <p class="subtitle">Com o método certo, qualquer jogador consegue evoluir - seja do zero ou quebrando um platô de anos.</p>
     <div class="hero-actions">
-      <a routerLink="/mentoria" class="cta-button primary">Mentoria</a>
-      <a routerLink="/aula-individual" class="cta-button primary">Aula individual</a>
-      <a routerLink="/cursos-avulsos" class="cta-button primary">Cursos gravados</a>
+      <a routerLink="/mentoria" class="cta-button primary">Ver produtos</a>
     </div>
+  </div>
+
+  <div class="hero-collage">
+    <img [src]="heroIcons[0].src" [alt]="heroIcons[0].alt" [class]="heroIcons[0].className" loading="lazy" />
+    <img [src]="heroIcons[1].src" [alt]="heroIcons[1].alt" [class]="heroIcons[1].className" loading="lazy" />
+    <img [src]="heroIcons[2].src" [alt]="heroIcons[2].alt" [class]="heroIcons[2].className" loading="lazy" />
+    <img [src]="heroIcons[3].src" [alt]="heroIcons[3].alt" [class]="heroIcons[3].className" loading="lazy" />
   </div>
 </section>
 
-<section class="offers">
+<section class="stats-strip">
+  <span>+200 alunos</span>
+  <span>4 anos de ensino</span>
+  <span>FIDE rated</span>
+</section>
+
+<section class="offers-section">
   <div class="section-heading">
     <p class="section-label">O que eu ofereço</p>
-    <!--<h2>Formatos de treinamento.</h2>-->
+    <h2>Escolha seu caminho</h2>
   </div>
 
   <div class="offer-grid">
-    <article class="offer-card" *ngFor="let offer of offers">
+    <article class="offer-tile" *ngFor="let offer of offers" [ngClass]="offer.tone">
+      <div class="tile-top">
+        <img [src]="offer.image" [alt]="offer.title" loading="lazy" />
+        <span class="offer-label">{{ offer.label }}</span>
+      </div>
       <h3>{{ offer.title }}</h3>
       <p>{{ offer.summary }}</p>
-      <a [routerLink]="offer.link" class="plan-link">Saiba mais</a>
+      <a [routerLink]="offer.link" class="plan-link">Saiba mais →</a>
     </article>
   </div>
 </section>
+
+<section class="resources-row">
+  <div class="section-heading compact-heading">
+    <h2>Recursos adicionais</h2>
+  </div>
+
+  <div class="resource-grid">
+    <article class="resource-item" *ngFor="let resource of resources">
+      <img [src]="resource.image" [alt]="resource.title" loading="lazy" />
+      <div>
+        <h3>{{ resource.title }}</h3>
+        <p>{{ resource.subtitle }}</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="cta-band">
+  <img src="assets/images/foguete.png" alt="Foguete" class="cta-rocket" loading="lazy" />
+  <p class="eyebrow cta-eyebrow">Pronta para dar o próximo lance?</p>
+  <h2>Escolha o produto que faz sentido para você e comece hoje.</h2>
+  <a routerLink="/mentoria" class="cta-button primary cta-main">Ver todos os produtos</a>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-brand">
+    <span class="brand-icon">♟</span>
+    <span class="brand-text">XADREZMASTER</span>
+    <p>Método, dedicação e cronograma feito para você evoluir de verdade no xadrez.</p>
+  </div>
+
+  <div class="footer-column">
+    <h3>Produtos</h3>
+    <a routerLink="/mentoria">Mentoria de Xadrez</a>
+    <a routerLink="/aula-individual">Aula Individual</a>
+    <a routerLink="/cursos-gravados">Cursos Gravados</a>
+  </div>
+
+  <div class="footer-column">
+    <h3>Contato</h3>
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a href="mailto:contato@xadrezmaster.com">Email</a>
+  </div>
+</footer>
 
 
