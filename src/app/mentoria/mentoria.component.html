@@ -45,7 +45,11 @@
         class="preview-item" 
         *ngFor="let image of supportImages; let i = index; let isFirst = first"
         [class.clickable]="isFirst"
-        (click)="isFirst ? openModal(image) : null">
+        [attr.role]="isFirst ? 'button' : null"
+        [attr.tabindex]="isFirst ? 0 : null"
+        (click)="isFirst ? openModal(image) : null"
+        (keyup.enter)="isFirst ? openModal(image) : null"
+        (keyup.space)="isFirst ? openModal(image) : null">
         
         <div class="preview-media">
           <img [src]="image.src" [alt]="image.alt" loading="lazy" />
@@ -58,9 +62,26 @@
 </section>
 
 <!-- Modal de Detalhes -->
-<div class="modal-overlay" *ngIf="isModalOpen" (click)="closeModal()">
-  <div class="modal-content" (click)="$event.stopPropagation()">
-    <button class="close-btn" (click)="closeModal()">&times;</button>
+<div 
+  class="modal-overlay" 
+  *ngIf="isModalOpen" 
+  role="button"
+  tabindex="0"
+  (click)="closeModal()"
+  (keyup.enter)="closeModal()"
+  (keyup.space)="closeModal()">
+  
+  <div 
+    class="modal-content" 
+    role="dialog"
+    aria-modal="true"
+    tabindex="0"
+    (click)="$event.stopPropagation()"
+    (keydown)="$event.stopPropagation()">
+    
+    <button type="button" class="close-btn" (click)="closeModal()" aria-label="Fechar modal">
+      <span class="close-icon" aria-hidden="true">&times;</span>
+    </button>
     <img [src]="selectedImage?.src" [alt]="selectedImage?.alt" class="modal-image" />
     <p class="modal-caption">{{ selectedImage?.caption }}</p>
   </div>

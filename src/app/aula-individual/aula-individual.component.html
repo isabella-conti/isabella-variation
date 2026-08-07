@@ -58,16 +58,22 @@
   </div>
 </section>
 
-
 <!-- Seção de Preview do Cronograma -->
 <section class="preview-section" aria-labelledby="preview-title">
   <div class="site-container">
+    <div class="preview-header">
+      <h2 id="preview-title">Exemplo de cronograma de estudos</h2>
+    </div>
 
     <div class="preview-grid">
       <figure 
         class="preview-item clickable" 
         *ngFor="let image of supportImages; let isFirst = first"
-        (click)="openModal(image)">
+        role="button"
+        tabindex="0"
+        (click)="openModal(image)"
+        (keyup.enter)="openModal(image)"
+        (keyup.space)="openModal(image)">
         
         <div class="preview-media">
           <img [src]="image.src" [alt]="image.alt" loading="lazy" />
@@ -95,8 +101,23 @@
 </section>
 
 <!-- Modal Pop-up para Ampliação da Imagem -->
-<div class="modal-overlay" *ngIf="isModalOpen" (click)="closeModal()">
-  <div class="modal-content" (click)="$event.stopPropagation()">
+<div 
+  class="modal-overlay" 
+  *ngIf="isModalOpen" 
+  role="button"
+  tabindex="0"
+  (click)="closeModal()"
+  (keyup.enter)="closeModal()"
+  (keyup.space)="closeModal()">
+  
+  <div 
+    class="modal-content" 
+    role="dialog"
+    aria-modal="true"
+    tabindex="0"
+    (click)="$event.stopPropagation()"
+    (keydown)="$event.stopPropagation()">
+    
     <button type="button" class="close-btn" (click)="closeModal()" aria-label="Fechar modal">
       <span class="close-icon" aria-hidden="true">&times;</span>
     </button>
