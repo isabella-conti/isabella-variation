@@ -1,30 +1,23 @@
-<section class="page-hero">
-  <div class="hero-content">
+<section class="page-hero" aria-labelledby="mentoria-title">
+  <div class="site-container hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow">Mentoria de xadrez</p>
-      <h1>Pare de estudar sem direção e comece a treinar de verdade.</h1>
+      <h1 id="mentoria-title">Pare de estudar sem direção e comece a treinar de verdade.</h1>
       <p class="lead">
         Treino guiado para sair do estudo solto e evoluir com consistência.
       </p>
 
-      <ul class="hero-list">
-        <li>Diagnóstico individual de 15 minutos.</li>
-        <li>Cronograma personalizado.</li>
-        <li>Aulas ao vivo semanais de 1h30.</li>
-        <li>Laboratório de exercícios.</li>
-        <li>Grupo exclusivo no WhatsApp.</li>
+      <ul class="hero-list" aria-label="O que está incluído na mentoria">
+        <li><span class="benefit-marker" aria-hidden="true">✓</span><span>Diagnóstico individual de 15 minutos.</span></li>
+        <li><span class="benefit-marker" aria-hidden="true">✓</span><span>Cronograma personalizado.</span></li>
+        <li><span class="benefit-marker" aria-hidden="true">✓</span><span>Aulas ao vivo semanais de 1h30.</span></li>
+        <li><span class="benefit-marker" aria-hidden="true">✓</span><span>Laboratório de exercícios.</span></li>
+        <li><span class="benefit-marker" aria-hidden="true">✓</span><span>Grupo exclusivo no WhatsApp.</span></li>
       </ul>
-
-      <div class="hero-actions">
-        <a href="https://pay.kiwify.com.br/HrTQS6u" target="_blank" rel="noopener noreferrer" class="button-link primary">Assinar plano mensal</a>
-        <a href="https://pay.kiwify.com.br/SPymlHQ" target="_blank" rel="noopener noreferrer" class="button-link secondary">Assinar plano semestral</a>
-      </div>
     </div>
 
-    <aside class="offer-card">
-      <p class="offer-label">Oferta da mentoria</p>
-      <h2>Treino guiado com rotina, direção e acompanhamento.</h2>
-      <p class="offer-price">R$ 280 <span>/ mês</span></p>
+    <aside class="offer-card" aria-labelledby="offer-title">
+      <h2 id="offer-title">Treino guiado com rotina, direção e acompanhamento.</h2>
+      <p class="offer-price"><span class="price-value">R$ 280</span> <span class="price-unit">/ mês</span></p>
       <p class="offer-note">Pacote semestral com valor reduzido para R$ 240/mês.</p>
 
       <div class="offer-meta">
@@ -33,19 +26,27 @@
         <span>Área de membros com gravações</span>
       </div>
     </aside>
+
+    <div class="hero-actions" aria-label="Escolha seu plano">
+      <a href="https://pay.kiwify.com.br/HrTQS6u" target="_blank" rel="noopener noreferrer" class="button-link primary">Assinar plano mensal</a>
+      <a href="https://pay.kiwify.com.br/SPymlHQ" target="_blank" rel="noopener noreferrer" class="button-link secondary">Assinar plano semestral</a>
+    </div>
   </div>
 </section>
 
-<section class="preview-section">
-  <div class="preview-header">
-    <p class="section-label">Exemplos</p>
-    <h2>Cronograma e plataforma para você ver como funciona.</h2>
-  </div>
+<section class="preview-section" aria-labelledby="preview-title">
+  <div class="site-container">
+    <div class="preview-header">
+      <h2 id="preview-title">Cronograma e plataforma para você ver como funciona.</h2>
+    </div>
 
-  <div class="preview-grid">
-    <figure class="preview-item" *ngFor="let image of supportImages">
-      <img [src]="image.src" [alt]="image.alt" loading="lazy" />
-      <figcaption>{{ image.caption }}</figcaption>
-    </figure>
+    <div class="preview-grid">
+      <figure class="preview-item" *ngFor="let image of supportImages">
+        <div class="preview-media">
+          <img [src]="image.src" [alt]="image.alt" loading="lazy" />
+        </div>
+        <figcaption>{{ image.caption }}</figcaption>
+      </figure>
+    </div>
   </div>
 </section>

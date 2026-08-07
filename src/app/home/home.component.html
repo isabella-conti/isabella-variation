@@ -1,29 +1,31 @@
-<section class="hero">
-  <div class="hero-content">
-    <p class="eyebrow">Treinamento de Xadrez</p>
-    <h1>Escolha o seu próximo passo no xadrez.</h1>
-    <p class="subtitle">Cada formato tem sua própria página para ficar mais claro o que você vai receber.</p>
-    <div class="hero-actions">
-      <a routerLink="/mentoria" class="cta-button primary">Mentoria</a>
-      <a routerLink="/aula-individual" class="cta-button primary">Aula individual</a>
-      <a routerLink="/cursos-avulsos" class="cta-button primary">Cursos gravados</a>
+<section class="page-hero" aria-labelledby="home-title">
+  <div class="site-container hero-copy">
+    <h1 id="home-title">Um próximo passo claro para o seu xadrez.</h1>
+    <p class="lead">
+      Escolha entre acompanhamento contínuo, uma aula sob medida ou materiais gravados para estudar no seu ritmo.
+    </p>
+    <a class="button-link primary hero-link" href="#training-paths">Ver caminhos de treino</a>
+  </div>
+</section>
+
+<section class="path-section" id="training-paths" aria-labelledby="paths-title">
+  <div class="site-container">
+    <div class="path-header">
+      <h2 id="paths-title">Três formas de estudar com mais direção.</h2>
+      <p>Cada formato responde a um momento diferente do seu treino.</p>
+    </div>
+
+    <div class="path-grid">
+      <article
+        class="path-card"
+        *ngFor="let path of trainingPaths"
+        [attr.aria-labelledby]="'path-title-' + path.id"
+      >
+        <h3 [id]="'path-title-' + path.id">{{ path.title }}</h3>
+        <p class="path-summary">{{ path.summary }}</p>
+        <p class="path-fit"><strong>Para você:</strong> {{ path.fit }}</p>
+        <a [routerLink]="path.route" class="button-link path-link">{{ path.cta }}</a>
+      </article>
     </div>
   </div>
 </section>
-
-<section class="offers">
-  <div class="section-heading">
-    <p class="section-label">O que eu ofereço</p>
-    <!--<h2>Formatos de treinamento.</h2>-->
-  </div>
-
-  <div class="offer-grid">
-    <article class="offer-card" *ngFor="let offer of offers">
-      <h3>{{ offer.title }}</h3>
-      <p>{{ offer.summary }}</p>
-      <a [routerLink]="offer.link" class="plan-link">Saiba mais</a>
-    </article>
-  </div>
-</section>
-
-

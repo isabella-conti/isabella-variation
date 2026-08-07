@@ -1,23 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
 :root {
-  --green: #0F766E;
-  --green-hover: #115E59;
-  --bg-dark: #0F172A;
-  --bg-medium: #1E293B;
-  --text-light: #F8FAFC;
-  --text-muted: #CBD5E1;
-  --card-border: rgba(96, 165, 250, 0.18);
-  --accent-gold: #FBBF24;
-  --accent-gold-hover: #F59E0B;
-  --accent-rust: #3B82F6;
-  --accent-rust-dark: #1D4ED8;
-  --font-main: 'Segoe UI', 'Roboto', sans-serif;
+  --bg-dark: #121212;
+  --bg-medium: #1e1e1e;
+  --surface-dark: #161413;
+  --surface-mahogany: #2a1e1c;
+  --text-light: #f5f5f0;
+  --text-muted: #c8c1b8;
+  --text-gold-muted: #c8aa6e;
+  --accent-gold: #d4af37;
+  --accent-gold-hover: #e2bd4b;
+  --border-gold: rgba(212, 175, 55, 0.42);
+  --border-subtle: #3a2e2a;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-main: 'Inter', 'Segoe UI', sans-serif;
+  --content-max: 1120px;
+  --page-gutter: 24px;
+  --radius-card: 16px;
+  --radius-control: 10px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --focus-ring: 0 0 0 3px rgba(212, 175, 55, 0.36);
 }
 
-html, body {
-  background-color: var(--bg-dark);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg-dark);
+}
+
+body {
+  background: var(--bg-dark);
   color: var(--text-light);
   font-family: var(--font-main);
   margin: 0;
-  padding: 0;
+  min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a,
+button {
+  font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 3px;
+  box-shadow: var(--focus-ring);
 }

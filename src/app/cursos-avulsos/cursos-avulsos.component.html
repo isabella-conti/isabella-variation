@@ -1,22 +1,50 @@
-<section class="page-hero">
-  <div class="hero-content">
-    <p class="eyebrow">Cursos gravados</p>
-    <h1>Conteúdos objetivos para estudar no seu ritmo.</h1>
+<section class="page-hero" aria-labelledby="courses-title">
+  <div class="site-container hero-copy">
+    <h1 id="courses-title">Escolha um tema e avance no seu próximo treino.</h1>
     <p class="lead">
-      Cada curso gravado resolve um tema específico. Assim, você escolhe o que faz mais sentido agora.
+      Cursos gravados e materiais diretos para estudar um tema por vez, no ritmo que fizer sentido para você.
     </p>
   </div>
 </section>
 
-<section class="course-grid">
-  <article class="course-card" *ngFor="let course of courses">
-    <h2>{{ course.title }}</h2>
-    <p>{{ course.text }}</p>
-    <a [href]="course.link" target="_blank" rel="noopener noreferrer" class="button-link">Comprar agora</a>
-  </article>
+<section class="catalog-section" aria-labelledby="catalog-title">
+  <div class="site-container">
+    <div class="catalog-header">
+      <h2 id="catalog-title">Um próximo foco para cada momento do estudo.</h2>
+      <p>Escolha o curso que responde à pergunta que está na sua frente agora.</p>
+    </div>
+
+    <div class="catalog-grid">
+      <article
+        class="course-card"
+        *ngFor="let course of courses"
+        [attr.aria-labelledby]="'course-title-' + course.id"
+      >
+        <p class="course-kicker">{{ course.kicker }}</p>
+        <h3 [id]="'course-title-' + course.id">{{ course.title }}</h3>
+        <p class="course-benefit">{{ course.benefit }}</p>
+        <p class="course-fit"><strong>Para você:</strong> {{ course.fit }}</p>
+        <a [href]="course.link" target="_blank" rel="noopener noreferrer" class="button-link course-link">{{ course.cta }}</a>
+      </article>
+    </div>
+  </div>
 </section>
 
-<section class="final-card" id="contato">
-  <h2>Quer uma indicação? Eu posso te ajudar a escolher.</h2>
-  <p>Se você ainda está em dúvida, eu posso apontar o melhor curso para o seu momento.</p>
+<section class="guidance-section" aria-labelledby="guidance-title">
+  <div class="site-container guidance-grid">
+    <div>
+      <h2 id="guidance-title">Ainda não sabe por onde começar?</h2>
+      <p>
+        Escolher um curso fica mais simples quando você identifica o tipo de problema que quer trabalhar agora: estratégia, abertura, análise ou rotina de treino.
+      </p>
+    </div>
+
+    <aside class="guidance-note">
+      <h3>Comece pelo que está travando seu estudo.</h3>
+      <p>
+        Se ainda não está claro qual tema priorizar, uma aula individual pode ajudar a organizar o próximo passo a partir do seu momento no xadrez.
+      </p>
+      <a routerLink="/aula-individual" class="button-link primary">Organizar meu próximo passo</a>
+    </aside>
+  </div>
 </section>

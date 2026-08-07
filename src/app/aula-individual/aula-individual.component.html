@@ -1,29 +1,69 @@
-<section class="page-hero">
-  <p class="eyebrow">Aula individual</p>
-  <h1>Uma aula para entender seu jogo e organizar seus próximos passos.</h1>
-  <p class="lead">
-    Aqui a ideia é ser direto: uma sessão de 1h, análise do seu momento atual e um plano de estudo feito para você.
-  </p>
+<section class="page-hero" aria-labelledby="aula-title">
+  <div class="site-container hero-grid">
+    <div class="hero-copy">
+      <h1 id="aula-title">Uma aula para transformar dúvidas em um plano claro de treino.</h1>
+      <p class="lead">
+        Em uma sessão individual de 1 hora, analisamos seu momento no xadrez e definimos os próximos passos para você estudar com mais direção.
+      </p>
+    </div>
+
+    <aside class="session-card" aria-labelledby="session-title">
+      <p class="session-kicker">Uma sessão, um próximo passo claro.</p>
+      <p><span class="duration-value">R$120</span> <span class="price-unit">/ aula</span></p>
+      <h2 id="session-title">O que você leva da aula</h2>
+
+      <p class="session-duration">
+        <span>60 minutos de conversa e análise</span>
+      </p>
+
+      <ul class="session-facts">
+        <li>Análise do seu momento atual</li>
+        <li>Prioridades para o seu estudo</li>
+        <li>Próximos passos possíveis para a sua rotina</li>
+      </ul>
+
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdHr3Vn3fUylA3US7m5AWREo99TE3GEfXNc9KWZoDJCY-a_mQ/viewform?usp=sharing&ouid=110044805633215752156"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button-link primary"
+      >
+        Quero organizar meu treino
+      </a>
+      <p class="session-helper">Preencha o formulário para contar um pouco sobre você e seu momento no xadrez. Depois, combinamos os próximos passos.</p>
+    </aside>
+  </div>
 </section>
 
-<section class="content-grid">
-  <article class="info-card">
-    <h2>O que acontece na aula</h2>
-    <ul>
-      <li *ngFor="let step of steps">{{ step }}</li>
-    </ul>
-  </article>
+<section class="process-section" aria-labelledby="process-title">
+  <div class="site-container">
+    <div class="section-heading">
+      <h2 id="process-title">O que vamos organizar na sessão</h2>
+      <p>Uma conversa prática para entender o que está acontecendo e escolher o próximo foco sem tentar resolver tudo de uma vez.</p>
+    </div>
 
-  <article class="info-card">
-    <h2>Para quem é</h2>
-    <p>
-      Para quem quer estudar com mais clareza, corrigir erros com foco e ter um caminho simples de seguir depois da aula.
-    </p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHr3Vn3fUylA3US7m5AWREo99TE3GEfXNc9KWZoDJCY-a_mQ/viewform?usp=sharing&ouid=110044805633215752156" target="_blank" rel="noopener noreferrer" class="button-link">Abrir o forms</a>
-  </article>
+    <ol class="process-list">
+      <li *ngFor="let step of steps">
+        <span class="step-number" aria-hidden="true">{{ step.number }}</span>
+        <div>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+        </div>
+      </li>
+    </ol>
+  </div>
 </section>
 
-<section class="final-card" id="contato">
-  <h2>Se você quer uma aula sob medida, esse formato é para você.</h2>
-  <p>Eu posso ajustar o conteúdo para iniciante, intermediário ou avançado.</p>
+<section class="fit-section" aria-labelledby="fit-title">
+  <div class="site-container fit-grid">
+    <div>
+      <h2 id="fit-title">Para quem é essa aula?</h2>
+      <p>Para quem estuda por conta própria, sente que está se esforçando sem saber o que priorizar ou quer uma leitura mais objetiva do próprio jogo.</p>
+    </div>
+
+    <aside class="fit-note">
+      <h3>Você não precisa chegar com tudo pronto.</h3>
+      <p>A aula se adapta ao seu nível — iniciante, intermediário ou avançado — e parte das questões que você quer entender melhor.</p>
+    </aside>
+  </div>
 </section>
