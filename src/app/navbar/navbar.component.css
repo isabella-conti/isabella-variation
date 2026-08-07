@@ -16,8 +16,6 @@
   height: 44px;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--border-gold);
-  border-radius: 8px;
   background: var(--surface-dark);
   color: var(--accent-gold);
   font-size: 1.35rem;
