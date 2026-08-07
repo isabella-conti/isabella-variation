@@ -1,32 +1,51 @@
 <section class="page-hero">
   <div class="hero-content">
-    <p class="eyebrow">Mentoria de xadrez</p>
-    <h1>Treino com rotina, direção e acompanhamento.</h1>
-    <p class="lead">
-      A mentoria foi pensada para quem quer parar de estudar de forma solta e passar a seguir um plano claro.
-    </p>
+    <div class="hero-copy">
+      <p class="eyebrow">Mentoria de xadrez</p>
+      <h1>Pare de estudar sem direção e comece a treinar de verdade.</h1>
+      <p class="lead">
+        Treino guiado para sair do estudo solto e evoluir com consistência.
+      </p>
+
+      <ul class="hero-list">
+        <li>Diagnóstico individual de 15 minutos.</li>
+        <li>Cronograma personalizado.</li>
+        <li>Aulas ao vivo semanais de 1h30.</li>
+        <li>Laboratório de exercícios.</li>
+        <li>Grupo exclusivo no WhatsApp.</li>
+      </ul>
+
+      <div class="hero-actions">
+        <a href="https://pay.kiwify.com.br/HrTQS6u" target="_blank" rel="noopener noreferrer" class="button-link primary">Assinar plano mensal</a>
+        <a href="https://pay.kiwify.com.br/SPymlHQ" target="_blank" rel="noopener noreferrer" class="button-link secondary">Assinar plano semestral</a>
+      </div>
+    </div>
+
+    <aside class="offer-card">
+      <p class="offer-label">Oferta da mentoria</p>
+      <h2>Treino guiado com rotina, direção e acompanhamento.</h2>
+      <p class="offer-price">R$ 280 <span>/ mês</span></p>
+      <p class="offer-note">Pacote semestral com valor reduzido para R$ 240/mês.</p>
+
+      <div class="offer-meta">
+        <span>1h30 ao vivo por semana</span>
+        <span>WhatsApp exclusivo</span>
+        <span>Área de membros com gravações</span>
+      </div>
+    </aside>
   </div>
 </section>
 
-<section class="content-grid">
-  <article class="info-card">
-    <h2>Como funciona</h2>
-    <ul>
-      <li *ngFor="let item of highlights">{{ item }}</li>
-    </ul>
-  </article>
+<section class="preview-section">
+  <div class="preview-header">
+    <p class="section-label">Exemplos</p>
+    <h2>Cronograma e plataforma para você ver como funciona.</h2>
+  </div>
 
-  <article class="info-card">
-    <h2>Planos</h2>
-    <div class="plan" *ngFor="let plan of plans">
-      <h3>{{ plan.title }}</h3>
-      <p>{{ plan.text }}</p>
-      <a [href]="plan.link" class="button-link">Quero esse plano</a>
-    </div>
-  </article>
-</section>
-
-<section class="final-card" id="contato">
-  <h2>Se você quer evoluir com acompanhamento, esse é o caminho.</h2>
-  <p>Posso adaptar a mentoria para seu nível, sua agenda e seu objetivo no xadrez.</p>
+  <div class="preview-grid">
+    <figure class="preview-item" *ngFor="let image of supportImages">
+      <img [src]="image.src" [alt]="image.alt" loading="lazy" />
+      <figcaption>{{ image.caption }}</figcaption>
+    </figure>
+  </div>
 </section>

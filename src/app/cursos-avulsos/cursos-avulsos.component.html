@@ -12,6 +12,7 @@
   <article class="course-card" *ngFor="let course of courses">
     <h2>{{ course.title }}</h2>
     <p>{{ course.text }}</p>
+    <a [href]="course.link" target="_blank" rel="noopener noreferrer" class="button-link">Comprar agora</a>
   </article>
 </section>
 

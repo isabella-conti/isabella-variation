@@ -11,22 +11,38 @@ import { RouterModule } from '@angular/router';
 })
 export class MentoriaComponent {
   highlights = [
-    '1h30 de aula por semana',
-    'Grupo exclusivo no WhatsApp',
-    'Cronograma de estudos individual',
-    'Acompanhamento para seu nível e objetivo',
+    'Diagnóstico individual de 15 minutos.',
+    'Cronograma personalizado.',
+    'Aulas ao vivo semanais de 1h30.',
+    'Laboratório de exercícios.',
+    'Grupo exclusivo no WhatsApp.',
   ];
 
   plans = [
     {
       title: 'Plano mensal',
-      text: 'Ideal para quem quer começar com acompanhamento próximo e rotina bem definida.',
-      link: '#contato',
+      price: 'R$ 280/mês',
+      text: 'Para começar com acompanhamento próximo.',
+      link: 'https://pay.kiwify.com.br/HrTQS6u',
     },
     {
       title: 'Plano semestral',
-      text: 'Melhor para quem quer constância, evolução mais profunda e um plano de longo prazo.',
-      link: '#contato',
+      price: 'R$ 240/mês no semestral',
+      text: 'Melhor custo para evolução contínua.',
+      link: 'https://pay.kiwify.com.br/SPymlHQ',
+    },
+  ];
+
+  supportImages = [
+    {
+      src: 'assets/images/cronograma.png',
+      alt: 'Exemplo de cronograma da mentoria',
+      caption: 'Exemplo de cronograma.',
+    },
+    {
+      src: 'assets/images/plataforma.png',
+      alt: 'Exemplo da plataforma da mentoria',
+      caption: 'Exemplo da plataforma.',
     },
   ];
 }
