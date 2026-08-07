@@ -2,6 +2,13 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+// 1. Criar a interface para uma imagem individual
+interface SupportImage {
+  src: string;
+  alt: string;
+  caption: string;
+}
+
 @Component({
   selector: 'app-mentoria',
   standalone: true,
@@ -33,7 +40,8 @@ export class MentoriaComponent {
     },
   ];
 
-  supportImages = [
+  // 2. Tipar a lista com a interface criada
+  supportImages: SupportImage[] = [
     {
       src: 'assets/images/cronograma.png',
       alt: 'Exemplo de cronograma da mentoria',
@@ -45,4 +53,19 @@ export class MentoriaComponent {
       caption: 'Exemplo da plataforma.',
     },
   ];
+
+  isModalOpen = false;
+  
+  // 3. Usar SupportImage (no singular) aqui
+  selectedImage: SupportImage | null = null;
+
+  openModal(image: SupportImage): void {
+    this.selectedImage = image;
+    this.isModalOpen = true;
+  }
+
+  closeModal(): void {
+    this.isModalOpen = false;
+    this.selectedImage = null;
+  }
 }

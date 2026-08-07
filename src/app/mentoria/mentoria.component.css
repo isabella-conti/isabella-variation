@@ -249,3 +249,91 @@ h1 {
   .preview-header h2 { font-size: 2.1rem; }
   .preview-media { height: 260px; }
 }
+/* Interatividade no card clicável */
+.preview-item.clickable {
+  cursor: pointer;
+  position: relative;
+}
+
+.preview-item.clickable:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+}
+
+.zoom-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--surface-mahogany);
+  color: var(--text-light);
+  border: 1px solid var(--border-gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: var(--radius-control);
+  pointer-events: none;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(15, 13, 12, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;
+  max-height: 90vh;
+  padding: var(--space-4);
+  background: var(--surface-dark);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-card);
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.modal-caption {
+  margin-top: var(--space-3);
+  color: var(--text-light);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+
+/* Botão Fechar */
+.close-btn {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: var(--surface-mahogany);
+  color: var(--text-light);
+  border: 1px solid var(--border-gold);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.close-btn:hover {
+  background: var(--accent-gold);
+  color: #18120b;
+  transform: scale(1.05);
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -6,6 +6,12 @@ interface AulaStep {
   number: string;
   title: string;
   description: string;
+}
+
+interface SupportImage {
+  src: string;
+  alt: string;
+  caption: string;
 }
 
 @Component({
@@ -38,4 +44,33 @@ export class AulaIndividualComponent {
       description: 'Organizar um caminho de estudo possível para você continuar depois da aula.'
     }
   ];
+
+  supportImages: SupportImage[] = [
+    {
+      src: 'assets/images/cronograma.png',
+      alt: 'Exemplo de cronograma de estudos',
+      caption: 'Exemplo de cronograma de estudos.'
+    }
+  ];
+
+  isModalOpen = false;
+  selectedImage: SupportImage | null = null;
+
+  openModal(image: SupportImage): void {
+    this.selectedImage = image;
+    this.isModalOpen = true;
+  }
+
+  closeModal(): void {
+    this.isModalOpen = false;
+    this.selectedImage = null;
+  }
+
+  // Permite fechar o modal ao pressionar a tecla ESC
+  @HostListener('document:keydown.escape', ['$event'])
+  onEscapeKey(): void {
+    if (this.isModalOpen) {
+      this.closeModal();
+    }
+  }
 }

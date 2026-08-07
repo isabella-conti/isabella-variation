@@ -41,12 +41,27 @@
     </div>
 
     <div class="preview-grid">
-      <figure class="preview-item" *ngFor="let image of supportImages">
+      <figure 
+        class="preview-item" 
+        *ngFor="let image of supportImages; let i = index; let isFirst = first"
+        [class.clickable]="isFirst"
+        (click)="isFirst ? openModal(image) : null">
+        
         <div class="preview-media">
           <img [src]="image.src" [alt]="image.alt" loading="lazy" />
+          <span *ngIf="isFirst" class="zoom-badge">🔍 Clique para ampliar</span>
         </div>
         <figcaption>{{ image.caption }}</figcaption>
       </figure>
     </div>
   </div>
 </section>
+
+<!-- Modal de Detalhes -->
+<div class="modal-overlay" *ngIf="isModalOpen" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="closeModal()">&times;</button>
+    <img [src]="selectedImage?.src" [alt]="selectedImage?.alt" class="modal-image" />
+    <p class="modal-caption">{{ selectedImage?.caption }}</p>
+  </div>
+</div>
